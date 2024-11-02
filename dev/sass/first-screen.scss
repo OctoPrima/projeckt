@@ -1,0 +1,241 @@
+.banner {
+    padding: 66px 0 143px 0;
+    background-color: $gray-bg;
+
+    >.container {
+        display: flex;
+
+        .banner-content {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            width: 100%;
+
+            small.banner-over-title {
+                font-size: 0;
+                position: relative;
+                width: 195px;
+                display: inline-block;
+                border-top: 1px solid $gray-svg;
+                margin-bottom: 10px;
+            }
+
+            .banner-title {
+                font-weight: 600;
+                color: $gray-color;
+                line-height: 1.2;
+                margin-bottom: 16px;
+                text-transform: capitalize;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+                font-weight: 400;
+                color: $gray-svg;
+                line-height: 1.5;
+                margin-bottom: 46px;
+
+                strong {
+                    color: $gray-color;
+                    font-weight: 600;
+                }
+            }
+
+            .banner-btn-row {
+                margin-bottom: 82px;
+                display: flex;
+                gap: 24px;
+
+                .banner-link {
+                    text-decoration: none;
+                    color: $brand-white-color;
+                    padding: 17px 29px;
+                    border-radius: 16px;
+                    text-transform: uppercase;
+                    background-color: $brand-black-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border: 1px solid $brand-black-color;
+                    font-weight: 600;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $brand-white-color;
+                        color: $brand-black-color;
+                    }
+                }
+            }
+
+            .banner-advantages {
+                display: flex;
+                flex-direction: row;
+                gap: 64px;
+                font-size: 36px;
+                font-weight: 600;
+
+                h3 {
+                    margin-bottom: -12px;
+                }
+
+                small {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #848586;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .banner-swiper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 62px;
+                    right: 220px;
+                    width: 124px;
+                    height: 128px;
+                    background: url(assets/img/banner-arrow.svg) center no-repeat;
+                    transform: rotate(-5deg);
+                    background-size: contain;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    width: 174px;
+                    height: 400px;
+                    background: url(assets/img/banner-points.svg) center no-repeat;
+                    background-size: contain;
+                }
+            
+            .swiper {
+                width: 780px;
+                height: 580px;
+                padding-top: 40px;
+                padding-left: 10px;
+                    
+                transition: .7s;
+
+                .swiper-slide {
+                    transition: .7s;
+                    
+                    img {
+
+                        &:last-child {
+                            margin-top: calc(-100% - 90px);
+                            opacity: .99;
+                          
+                        }
+
+                        &:first-child {
+                            filter: blur(12px);
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                
+
+                .swiper-slide-active {
+                    transition: .7s;
+                    
+                    img {
+                        width: 391px;
+                        height: 394px;
+                        
+                        transition: .7s;
+                    }
+                }
+
+                .swiper-slide-next {
+                    transition: .7s;
+                    
+                    img {
+                        margin-top: 163px;
+                        margin-left: -20px;
+                        padding: 23px;
+                        transition: 0.7s;
+                        border-radius: 24px;
+                    }
+                }
+    
+                img {
+                    width: 100%;
+                }
+
+            }
+
+            .banner-slider-navigation {
+                position: relative;
+                width: 166px;
+                height: 69px;
+                background-color: transparent;
+                box-shadow: 0px 19px 34px -15px rgba(15, 15, 15, 0.3), 0px 45px 36px -15px rgba(15, 15, 15, 0.3);
+                border-radius: 18px;
+                display: flex;
+                justify-content: center;
+                margin-left: -315px;
+                margin-top: -84px;
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    height: 68px;
+                    width: 69px; 
+                    top: 0;
+                    margin: 0;
+                    width: 83px;
+                    height: 100%;
+                    
+                    &::after {
+                        display: none;
+                    }
+
+                    svg {
+                        fill: $gray-svg;
+                        width: 26px;
+                        height: 26px;
+
+                        &:hover {
+                            fill: $gray-color;
+                        }
+                    }
+                }
+
+                .swiper-button-prev {
+                    border-radius: 18px 0 0 18px;
+                }
+
+                .swiper-button-next {
+                    border-radius: 0 18px 18px 0;
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    position: static;
+                    background-color: $gray-bg;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 25px;
+                        width: 2px;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                        background-color: $gray-svg;
+                        z-index: 2;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+}

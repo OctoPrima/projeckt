@@ -1,5 +1,6 @@
 footer {
-    background-color: $footer-bg;
+    background-color: $gray-color;
+    margin-top: auto;
 
    .container {
 
@@ -10,7 +11,7 @@ footer {
         align-items: center;
         margin: 0 auto;
         padding: 86px 0 25px;
-        border-bottom: 1px solid #818181;
+        border-bottom: 1px solid $gray-svg;
 
         nav.nav-footer {
             margin-left: auto;
@@ -21,8 +22,12 @@ footer {
 
                 .list-item-footer a {
                     text-decoration: none;
-                    color: $footer-color;
+                    color: $gray-svg;
                     text-transform: capitalize;
+                }
+
+                &:hover {
+                    color: $brand-white-color;
                 }
 
             }
@@ -33,15 +38,30 @@ footer {
         width: 100%;
         display: flex;
         padding: 57px 0 90px;
-        color: #999999;
+        color: $gray-svg;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .social {
-            margin-left: auto;
+        .nav-footer {
             display: flex;
-            gap: 54px;
+            margin-left: auto;
+            gap: 52px;
+
+            a svg {
+                text-decoration: none;
+                max-width: 22px;
+                max-height: 22px;
+                fill: currentColor;
+
+                &:active {
+                    decoration: none;
+                }
+
+                &:hover {
+                    fill: $brand-white-color;
+                }
+            }
         }
     }
    }

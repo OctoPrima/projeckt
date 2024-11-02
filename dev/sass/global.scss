@@ -7,7 +7,14 @@
 body {
     font-family: $font-primary;
     font-size: $font-size;
-    color: #000;
+    color: $brand-black-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    & .d-none {
+        display: none;
+    }
 }
 
 .container {
@@ -19,7 +26,7 @@ body {
 
 
 h1 {
-    font-size: 72px;
+    font-size: 74px;
 }
 
 h2 {
@@ -27,7 +34,15 @@ h2 {
 }
 
 h3 {
+    font-size: 36px;
+}
+
+h4 {
     font-size: 21px;
+}
+
+h5 {
+    font-size: 18px;
 }
 
 a {
@@ -39,39 +54,46 @@ a {
 }
 
 .btn {
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: $brand-white-color;
+    border: 1px solid $brand-black-color;
     border-radius: 16px;
     font-size: 16px;
     display: inline-block;
-    color: #000;
+    color: $brand-black-color;
     font-weight: 600;
     padding: 18px 30px;
     text-transform: uppercase;
     transition: .3s;
     white-space: nowrap;
+    font-family: $font-primary;
 
     &.btn-primary {
-        background-color: #000;
-        color: #fff;
+        background-color: $brand-black-color;
+        color: $brand-white-color;
         padding: 18px 21px;
 
         &:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: $brand-white-color;
+            color: $brand-black-color;
             transition: .3s;
         }
     }
 
     &.btn-secondary {
-        background-color: #fff;
-        color: #000;
+        background-color: $brand-white-color;
+        color: $brand-black-color;
         
         &:hover {
-            background-color: #000;
-            color: #fff;
+            background-color: $brand-black-color;
+            color: $brand-white-color;
             transition: .3s;
         }
     }
 
+}
+
+svg {
+    max-width: 100%;
+    max-height: 100%;
+    color: $gray-svg;
 }
