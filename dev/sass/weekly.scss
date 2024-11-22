@@ -1,0 +1,54 @@
+.weekly {
+    background-color: $gray-bg;
+    padding-top: 70px;
+    margin-bottom: 238px;
+
+    .container {
+        max-width: 1642px;
+        position: relative;
+        
+
+        .weekly-title {
+            color: $gray-accent;
+            margin-bottom: 0;
+        } 
+
+        
+        .carousel-weekly-swiper {
+            max-width: 1642px;
+            overflow: hidden;
+            padding-top: calc(46px * 2);
+            
+            
+            .carousel-weekly {
+                position: relative;
+                width: 100%;
+                overflow: visible;
+            }
+        }
+
+        .widget {
+            position: absolute;
+            z-index: 10;
+            bottom: -160px;
+            right: 100px;
+        }
+
+    }
+
+    .swiper-slide {
+        min-width: 281px;
+        max-width: 281px;
+        box-shadow: 30px 1px 78px 0px #c8c7c7;
+
+    }
+}
+
+.weekly-slider-navigation {
+    @include banner-slider-navigation;
+    margin-left: calc(100% - 50%);
+    transform: translateX(-50%);
+    margin-top: 114px;
+    margin-bottom: 90px;
+    cursor: pointer;
+ }

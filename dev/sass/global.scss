@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: $bg-body;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $brand-black-color;
+    border-radius: 6px;
+  }
+  
+
 body {
     font-family: $font-primary;
     font-size: $font-size;
@@ -11,10 +23,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: $bg-body;
+}
 
-    & .d-none {
-        display: none;
-    }
+ .d-none {
+    display: none;
 }
 
 .container {
@@ -24,6 +37,9 @@ body {
     margin: 0 auto;
 }
 
+.section-title {
+    @include section-title;
+}
 
 h1 {
     font-size: 74px;
@@ -38,10 +54,14 @@ h3 {
 }
 
 h4 {
-    font-size: 21px;
+    font-size: 22px;
 }
 
 h5 {
+    font-size: 20px;
+}
+
+h6 {
     font-size: 18px;
 }
 
@@ -67,7 +87,7 @@ a {
     white-space: nowrap;
     font-family: $font-primary;
 
-    &.btn-primary {
+    &-primary {
         background-color: $brand-black-color;
         color: $brand-white-color;
         padding: 18px 21px;
@@ -79,7 +99,7 @@ a {
         }
     }
 
-    &.btn-secondary {
+    &-secondary {
         background-color: $brand-white-color;
         color: $brand-black-color;
         
@@ -90,10 +110,54 @@ a {
         }
     }
 
+    &-small {
+        font-size: 14px;
+        padding: 13px 23px;
+    }
+
 }
 
 svg {
     max-width: 100%;
     max-height: 100%;
     color: $gray-svg;
+}
+
+.widget-user__percent-toon {
+    color: #10C352;
+}
+
+.widget-user__percent-tobottom {
+    color: #E23333;
+}
+
+.icon {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-ethereum {
+    background-image: url(assets/img/icon-ethereum.svg);
+}
+
+.icon-xs {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-sm {
+    width: 21px;
+    height: 21px;
+}
+
+.icon-md {
+    width: 31px;
+    height: 31px;
+}
+
+.icon-lg {
+    width: 45px;
+    height: 45px;
 }

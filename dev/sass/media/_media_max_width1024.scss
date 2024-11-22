@@ -1,12 +1,14 @@
 @media screen and (max-width: 1024px) {
+
     header {
         padding: 30px 0;
         z-index: 2;
 
         .container {
+            transition: 1s;
+            
             .mobail-container {
                 padding: 48px 0;
-                display: none;
                 width: 100%;
                 align-items: center;
                 margin: 0 auto;
@@ -17,7 +19,11 @@
                 top: 100px;
                 background: black;
                 color: white;
+                transform: translateX(-100%);
+                transition: 1s;
+                z-index: 10;
                 position: absolute;
+                   
     
                 .list-nav {
                     flex-direction: column;
@@ -28,9 +34,11 @@
 
                     .list-item a {
 
+                        font-size: 16px;
+
                         &:hover {
                             color: #fff;
-                            text-shadow: 1px 1px 1px $nav-color;
+                            text-shadow: 1px 1px 1px #535353;
                         }
                     }
                 }
@@ -38,6 +46,8 @@
                 &.show {
                     display: flex;
                     flex-direction: column;
+                    transform: translateX(0);
+                    transition: 1s;
                 }
 
                 form.header-search {
@@ -143,6 +153,7 @@
 
                 .banner-btn-row {
                     gap: 18px;
+                    margin-bottom: 20px;
                     
                     .btn {
                         font-size: 12px;
@@ -156,6 +167,12 @@
 
                 }
 
+                .banner-trustpilot {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
                 .banner-advantages {
                     display: none;
                 }
@@ -166,15 +183,12 @@
                 margin: 0 auto;
 
                 &::after {
-                    top: 0px;
-                    right: 66px;
+                    top: 10%;
                     width: 58px;
                     height: 128px;
                 }
 
                 &::before {
-                    top: -10px;
-                    right: -40px;
                     width: 92px;
                     height: 214px;
                 }
@@ -182,46 +196,135 @@
                 .swiper {
                     width: 400px;
                     height: 296px;
-                    margin-left: 0px;
-                    padding-left: 0;
+                    padding-left: 0px;
+                    margin-top: 0;
 
                     .swiper-slide-active {
                     
                         img {
-                            width: 208px;
-                            height: 210px;
+                            max-width: 208px;
+                            max-height: 210px;
                         }
                     }
     
                     .swiper-slide-next {
                         
                         img {
-                            margin-top: 92px;
-                            margin-left: 5px;
-                            padding: 10px;
+                            margin-top: 72px;
+                            padding-left: -30px;
                         }
-                    }
-                }
-
-                .banner-slider-navigation {
-                    width: 88px;
-                    height: 36px;
-                    border-radius: 8px;
-                    margin-left: -154px;
-                    margin-top: -46px;
-                    box-shadow: 0px 19px 32px -12px rgba(15, 15, 15, 1.3), 0px 62px 34px -19px rgba(15, 15, 15, 1.3);
-
-
-                    .swiper-button-prev {
-                        border-radius: 8px 0 0 8px;
-                    }
-    
-                    .swiper-button-next {
-                        border-radius: 0 8px 8px 0;
                     }
                 }
             }
         }
+    }
+
+    .banner-slider-navigation,
+    .weekly-slider-navigation {
+        &:not(.banner-slider-navigation) {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        max-width: 88px;
+        height: 36px;
+        border-radius: 8px;
+        margin-top: -15px;
+        margin-bottom: 8%;
+        box-shadow: 0px 10px 29px -12px rgb(15, 15, 15), 0px 65px 38px -19px rgb(15, 15, 15);
+
+
+        div[class$="-prev"] {
+            border-radius: 8px 0 0 8px;
+        }
+
+        div[class$="-next"] {
+            border-radius: 0 8px 8px 0;
+        }
+
+        div[class$="-next"],
+        div[class$="-prev"] {
+            max-width: 44px;
+
+            &::before {
+                height: 14px;
+                width: 1px;
+            }
+
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+
+    .weekly {
+    
+        .container {
+    
+            .weekly-title {
+                font-size: 30px;
+            } 
+
+            .carousel-weekly-swiper {
+                padding-top: calc(31x * 2);
+            }
+    
+        }
+
+        .swiper-slide {
+            min-width: 198px;
+            max-width: 198px;
+        }
+    }
+
+
+    .product {
+        padding: 10px 10px 14px;
+        border-radius: 16px;
+    
+        &-img {
+    
+            img:nth-child(1) {
+                width: 178px;
+                height: 178px;
+                border-radius: 16px;
+            }
+        }
+    
+        &-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    
+        &-bid-title {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+    
+        &-bid {
+            font-size: 12px;
+
+            .d-desktop {
+                display: none;
+            }
+
+            .d-mobile {
+                display: flex;
+            }
+        }
+    
+        & .btn-small {
+            max-width: 86px;
+            margin-top: -38px;
+            font-size: 10px;
+            padding: 10px 17px;
+            border-radius: 8px;
+        }
+    }
+
+    .widget {
+        display: none;
     }
 }
 

@@ -1,6 +1,5 @@
 .banner {
     padding: 66px 0 143px 0;
-    background-color: $gray-bg;
 
     >.container {
         display: flex;
@@ -10,13 +9,14 @@
             flex-direction: column;
             max-width: 500px;
             width: 100%;
+            margin-right: 114px;
 
             small.banner-over-title {
                 font-size: 0;
                 position: relative;
                 width: 195px;
                 display: inline-block;
-                border-top: 1px solid $gray-svg;
+                border-top: 1px solid $gray-accent;
                 margin-bottom: 10px;
             }
 
@@ -31,7 +31,7 @@
             .banner-subtitle {
                 font-size: 18px;
                 font-weight: 400;
-                color: $gray-svg;
+                color: $gray-accent;
                 line-height: 1.5;
                 margin-bottom: 46px;
 
@@ -68,6 +68,57 @@
                 }
             }
 
+            .banner-trustpilot {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                max-width: 242px;
+                width: 100%;
+                margin-bottom: 60px;
+
+                &::before {
+                    content: "";
+                    width: 22px;
+                    height: 22px;
+                    background-image: url(assets/img/star.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin-top: -6px;
+                }
+
+                .truspilot-stars {
+                    position: relative;
+                    width: 79px;
+                    height: 13px;
+                    margin-left: auto;
+                    margin-right: 8px;
+
+                    .stars-basic {
+                        background-image: url(assets/img/stars-basic.svg);
+                        background-repeat: no-repeat;
+                        width: inherit;
+                        height: 13px;
+                    }
+
+                    .stars-gold {
+                        position: absolute;
+                        top: -50%;
+                        transform: translateY(50%);
+                        background-image: url(assets/img/stars-gold.svg);
+                        background-repeat: no-repeat;
+                        height: 13px;
+                    }
+                }
+
+                .truspilot-follovers {
+                    font-size: 12px;
+                    color: $gray-accent;
+                    font-weight: 400;
+                    margin-top: 2px;
+                }
+                
+            }
+
             .banner-advantages {
                 display: flex;
                 flex-direction: row;
@@ -75,15 +126,14 @@
                 font-size: 36px;
                 font-weight: 600;
 
-                h3 {
-                    margin-bottom: -12px;
-                }
 
                 small {
                     font-size: 12px;
                     font-weight: 500;
                     color: #848586;
                     text-transform: capitalize;
+                    display: block;
+                    margin-top: 6px;
                 }
             }
         }
@@ -93,11 +143,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: hidden;
+
                 &::after {
                     content: "";
                     position: absolute;
                     top: 62px;
-                    right: 220px;
+                    right: calc(100% - 75%);
                     width: 124px;
                     height: 128px;
                     background: url(assets/img/banner-arrow.svg) center no-repeat;
@@ -110,132 +162,57 @@
                     position: absolute;
                     top: -10px;
                     right: -10px;
-                    width: 174px;
-                    height: 400px;
+                    max-width: 174px;
+                    max-height: 400px;
+                    width: 100%;
+                    height: 100%;
                     background: url(assets/img/banner-points.svg) center no-repeat;
                     background-size: contain;
                 }
             
-            .swiper {
-                width: 780px;
-                height: 580px;
+            .banner-slider {
+                max-width: 780px;
+                max-height: 580px;
+                width: 100%;
+                height: 100%;
                 padding-top: 40px;
-                padding-left: 10px;
-                    
+                padding-left: 12px;
                 transition: .7s;
 
                 .swiper-slide {
-                    transition: .7s;
                     
                     img {
+                        width: 100%;
+                        transition: .7s; 
 
                         &:last-child {
-                            margin-top: calc(-100% - 90px);
+                            margin-top: calc(-100% - 60px);
                             opacity: .99;
                           
                         }
 
                         &:first-child {
-                            filter: blur(12px);
+                            filter: blur(10px);
                             opacity: 0.5;
                         }
                     }
                 }
-                
-
-                .swiper-slide-active {
-                    transition: .7s;
-                    
-                    img {
-                        width: 391px;
-                        height: 394px;
-                        
-                        transition: .7s;
-                    }
-                }
 
                 .swiper-slide-next {
-                    transition: .7s;
                     
                     img {
-                        margin-top: 163px;
+                        margin-top: 156px;
                         margin-left: -20px;
-                        padding: 23px;
-                        transition: 0.7s;
-                        border-radius: 24px;
-                    }
-                }
-    
-                img {
-                    width: 100%;
-                }
-
-            }
-
-            .banner-slider-navigation {
-                position: relative;
-                width: 166px;
-                height: 69px;
-                background-color: transparent;
-                box-shadow: 0px 19px 34px -15px rgba(15, 15, 15, 0.3), 0px 45px 36px -15px rgba(15, 15, 15, 0.3);
-                border-radius: 18px;
-                display: flex;
-                justify-content: center;
-                margin-left: -315px;
-                margin-top: -84px;
-
-                .swiper-button-next,
-                .swiper-button-prev {
-                    height: 68px;
-                    width: 69px; 
-                    top: 0;
-                    margin: 0;
-                    width: 83px;
-                    height: 100%;
-                    
-                    &::after {
-                        display: none;
-                    }
-
-                    svg {
-                        fill: $gray-svg;
-                        width: 26px;
-                        height: 26px;
-
-                        &:hover {
-                            fill: $gray-color;
-                        }
+                        padding: 15%;
                     }
                 }
 
-                .swiper-button-prev {
-                    border-radius: 18px 0 0 18px;
-                }
-
-                .swiper-button-next {
-                    border-radius: 0 18px 18px 0;
-                }
-
-                .swiper-button-next,
-                .swiper-button-prev {
-                    position: static;
-                    background-color: $gray-bg;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        height: 25px;
-                        width: 2px;
-                        transform: translate(-50%, -50%);
-                        top: 50%;
-                        left: 50%;
-                        background-color: $gray-svg;
-                        z-index: 2;
-                        border-radius: 2px;
-                    }
-                }
             }
         }
     }
 
+}
+
+.banner-slider-navigation {
+    @include banner-slider-navigation;
 }
