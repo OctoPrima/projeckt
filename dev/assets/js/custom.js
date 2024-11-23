@@ -2,8 +2,6 @@
   const mobileContainer = document.querySelector('.mobail-container');
 
   const openButtons = document.querySelectorAll('[data-custom-widget="open-button"]');
-  const widget = document.querySelector('.widget');
-  const layoutItem = document.querySelectorAll('[data-layout]');
   const customWidgetsMenu = document.querySelectorAll('[data-custom-widget="menu"]');
   
 
@@ -86,8 +84,47 @@
  // });
 
 
- customWidgetsMenu.forEach((item, index)=>{
-    item.addEventListener('click', function() {
-      document.cookie === 'layoutCase=grid'
+ let date = new Date(Date.now() + 86400e3 * 365);
+
+ date = date.toUTCString();
+
+ customWidgetsMenu.forEach((menu, index)=>{
+
+    menu.setAttribute('id', 'layoutCase-' + (index + 1))
+
+    function getCookie(name) {
+      let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    let testCookie = getCookie('layoutCase-' + (index + 1))
+    console.log(testCookie);
+
+
+    menu.addEventListener('click', function() {
+      const dataLayout = menu.querySelectorAll('[data-layout]');
+      
+      dataLayout.forEach(item =>{
+
+        item.addEventListener('click', function() {
+          const widget = item.closest('.widget');
+          const thisNavigation = item.closest('.layout-case'); 
+          const thisNavigationItems = thisNavigation.querySelectorAll('.layout-case__item');
+
+          thisNavigationItems.forEach(item => {
+          item.classList.remove('active')
+          })
+          item.classList.add('active');
+
+          const dataLayoutValue = item.getAttribute('data-layout');
+          let cookieName = 'layoutCase-' + (index + 1);
+          let widgetLayoutCoockie = document.cookie = cookieName + "=" + dataLayoutValue + "; expires=" + date
+          
+        })
+      })
+
+
     })
  })
