@@ -1,0 +1,17 @@
+.account__load {
+    background: url(assets/img/load.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin: 136px auto 228px auto;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+
+    100% {
+        transform: rotate(-1turn);
+    }
+}

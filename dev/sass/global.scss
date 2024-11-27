@@ -131,6 +131,10 @@ svg {
     color: #E23333;
 }
 
+.widget-user__percent-zero {
+    color: $gray-svg;
+}
+
 .icon {
     display: inline-block;
     background-position: center;
@@ -160,4 +164,8 @@ svg {
 .icon-lg {
     width: 45px;
     height: 45px;
+}
+
+.d-flex {
+    display: flex;
 }

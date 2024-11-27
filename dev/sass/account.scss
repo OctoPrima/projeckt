@@ -1,0 +1,424 @@
+.account {
+    padding-top: 55px;
+    
+    .account-information {
+        display: flex;
+        box-sizing: border-box;
+
+        &__person {
+            margin-right: 130px;
+            padding-left: 70px;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        &__activity {
+            max-width: 678px;
+            width: 100%;
+        }
+    }
+
+    .account-head {
+        position: relative;
+        margin-bottom: 128px;
+    
+
+        &__background {
+            background-image: url(assets/img/accoun-img-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 356px;
+            width: 100%;
+            border-radius: 22px;
+            box-shadow: 7px 9px 30px $gray-shadov, -4px -3px 30px $gray-shadov;
+        }
+
+        &__avatar {
+            height: 166px;
+            width: 166px;
+            position: absolute;
+            top: 100%;
+            transform: translateY(-40%);
+            left: 70px;
+
+            img {
+                border-radius: 50%;
+                border: 6px solid $brand-white-color;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(assets/img/account-chek.svg) $brand-white-color;
+                width: 30px;
+                height: 30px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 50%;
+                border: 4px solid $brand-white-color;
+                top: 100%;
+                left: 100%;
+                transform: translate(-100%, -100%);
+            }
+        }
+    }
+
+    .account-person {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        border-bottom: 1px solid $gray-svg;
+    }
+
+    &__name {
+        color: $gray-color;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 1.5;
+        text-transform: capitalize  ;
+    }
+
+    &__id {
+        color: $gray-svg;
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__button {
+        font-weight: 500;
+        margin-left: auto;
+        margin-top: -66px;
+        padding: 12px 22px;
+        margin-bottom: 60px;
+    }
+
+    .account-subscribers {
+        display: flex;
+        padding-top: 44px;
+        margin-bottom: 116px;
+    }
+
+    &__sell,
+    &__followers,
+    &__followings {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4px;
+        color: $gray-color;
+        font-size: 32px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.5;
+        max-width: 181px;
+        width: 100%;
+        align-items: center;
+        
+        &:first-child {
+            align-items: start;
+        }
+
+        &:last-child {
+            align-items: end;
+        }
+
+        &:last-child span {
+            margin-right: 4px;
+        }
+
+
+        & span {
+            color: $gray-svg;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding-left: 4px;
+        }
+    }
+
+    .account-bio {
+        color: $gray-svg;
+        text-transform: capitalize;
+        border-bottom: 1px solid $gray-svg;
+        padding-bottom: 86px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    &__biography {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    &__nav-footer {
+        display: flex;
+        gap: 66px;
+        padding-top: 34px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+
+            &:hover {
+                fill: $gray-svg;
+            }
+        }
+    }
+
+    .account-tabs {
+        
+        &__nav {
+            display: flex;
+            margin-bottom: 16px;
+            margin-top: -55px;
+
+            button {
+                border: none;
+                background-color: transparent;
+            } 
+
+            .active {
+                color: $brand-black-color;
+                border-bottom: 3px solid $brand-black-color;
+
+                svg {
+                    color: $brand-black-color;
+                }
+            }
+        }
+
+        &__collection, 
+        &__activity {
+            color: $gray-accent;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            line-height: 1.5;
+            padding-bottom: 16px;
+            max-width: 336px;
+            width: 100%;
+
+            svg {
+                color: $gray-accent;
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &__content-collection {
+            display: none;
+            flex-wrap: wrap;
+            padding-top: 86px;
+            box-sizing: content-box;
+            gap: 28px;
+            justify-content: space-around;
+            
+            .product {
+                margin-bottom: 20px;
+                max-width: 204px;
+                min-width: 204px;
+                padding: 10px 10px 14px;
+                box-shadow: 9px 1px 30px -11px $gray-shadov, 6px 1px 71px -18px $gray-shadov;
+
+                .product-title {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                .product-bid-title {
+                    font-size: 10px;
+                }
+
+                img {
+                    width: 182px;
+                    height: 182px;
+                }
+
+                .btn {
+                    padding: 12px 18px;
+                    font-size: 10px;
+                    margin-top: -32px;
+                }
+
+                .product-bid {
+                    font-size: 8px;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        width: 10px;
+                        height: 10px;
+                        margin-top: -2px;
+                    }
+                }
+                
+            }
+        }
+
+        &__content-activity {
+            display: flex;
+            flex-direction: column;
+            gap: 42px;
+            max-width: 678px;
+            width: 100%;
+        }
+
+        &__select {
+            display: flex;
+            gap: 18px;
+        }
+
+        &__selector {
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .account-activity {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 176px;
+            background-color: $brand-white-color;
+            padding: 14px 20px 22px 14px;
+            border-radius: 12px;
+            margin-bottom: 42px;
+            box-shadow: 12px 15px 40px 5px $gray-shadov;
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 18px;
+                border-bottom: 1px solid $gray-svg;
+            }
+
+            &__avatar {
+                width: 64px;
+                height: 68px;
+                border-radius: 12px;
+            }
+
+            &__nickname {
+                font-size: 16px;
+                font-weight: 600;
+                color: $brand-black-color;
+                margin-left: 80px;
+                margin-top: -64px;
+                line-height: 1.7;
+            }
+
+            &__name {
+                margin-left: 80px;
+                font-size: 12px;
+                font-weight: 400;
+                position: relative;
+                display: inline-block;
+                max-width: 60px;
+                line-height: 1.7;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -8px;
+                    background: url(assets/img/account-chek.svg) $brand-white-color;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 2px solid $brand-white-color;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &__sale {
+                margin-left: auto;
+                margin-top: -50px;
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.5;
+                align-items: end;
+                padding-right: 38px;
+            }
+
+            &__sale-etherium {
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $brand-black-color;
+            }
+
+            &__sale-data {
+                color: $gray-svg;
+            }
+
+            &__price {
+                display: flex;
+                padding-top: 18px;
+            }
+
+            &__price-usd,
+            &__price-quantity,
+            &__price-floor,
+            &__price-traded {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $brand-black-color;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                text-align: center;
+                max-width: 200px;
+                width: 100%;
+                padding-left: 10px;
+
+
+                &:last-child {
+                    max-width: 42px;
+                }
+
+                i {
+                    margin-left: -14px;
+                    margin-bottom: -18px;
+                    margin-top: 4px;
+                }
+
+                span {
+                    font-size: 12px;
+                    color: $gray-svg;
+                    line-height: 1.1;
+                    margin-left: -10px;
+                }
+            }
+        }
+
+
+        .active {
+            display: flex;
+        }
+    }
+
+
+
+    .tabs__content {
+        display: none;
+    }
+    .active {
+        display: flex;
+    }
+    
+}
