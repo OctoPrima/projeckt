@@ -1,13 +1,14 @@
+addEventListener("load", (event) => {
   const btnburger = document.querySelector('.btn-burger');
   const mobileContainer = document.querySelector('.mobail-container');
-  // const linkBack = document.querySelector('.history-back.');
+  //const linkBack = document.querySelector('.history-back.');
 
-  // function historyBack() {
-  //   linkBack.addEventListener('click', function() {
-  //     window.history.back()
-  //   })
-  // }
-  
+  //  function historyBack() {
+  //    linkBack.addEventListener('click', function() {
+  //      window.history.back()
+  //    })
+  //  }
+
 
   const toggleMobileMenu =()=> {
     mobileContainer.classList.toggle('show')
@@ -46,5 +47,7 @@
 
   document.querySelector('.widget') ? installWidget() : null;
   document.querySelector('.tabs') ? installTabs() : null;
-  // linkBack ? historyBack() : null;
-//  document.querySelector('.tabs') ? installTabs() : null
+  document.querySelector('.accordion') ? installAccordion() : null;
+ // linkBack ? historyBack() : null;
+
+});

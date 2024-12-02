@@ -1,5 +1,4 @@
 function installTabs() {
-    console.log('installTabs');
 
     const tabsContent = document.querySelectorAll('.tabs__content');
     const tabsButton = document.querySelectorAll('.tabs__button')

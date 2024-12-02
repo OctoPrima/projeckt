@@ -1,0 +1,270 @@
+.just-unleash {
+    margin-bottom: 160px;
+
+    .container {
+        display: flex;
+        position: relative;
+    }
+
+    &__list {
+        max-width: 464px;
+        width: 100%;
+        margin-right: 102px;
+    }
+
+    &__title.section-title {
+        margin-bottom: 46px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        line-height: 1.2;
+
+        span {
+            color: $gray-svg;
+        }
+    }
+
+    &__chek-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-left: 26px;
+        margin-bottom: 76px;
+    }
+
+    &__item {
+        font-size: 16px;
+        color: $gray-color;
+        line-height: 2;
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            background: url(assets/img/icon-chek.svg);
+            top: 50%;
+            transform: translateY(-50%);
+            left: -26px;
+        }
+    }
+
+    a.btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        text-decoration: none;
+        max-width: 164px;
+        height: 60px;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+
+        svg {
+            stroke: $brand-white-color;
+            width: 22px;
+            height: 22px;
+            transition: .3s;
+        }
+
+        &:hover svg {
+            stroke: $brand-black-color;
+            transition: .3s;
+        }
+    }
+
+    &__wigets {
+        max-width: 836px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .widget {
+        margin-top: 338px;
+        margin-right: -142px;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__widget-follow {
+        max-width: 322px;
+        max-height: 510px;
+        width: 100%;
+        background-color: $brand-white-color;
+        border-radius: 12px;
+        padding: 26px 20px;
+        box-shadow: 14px -10px 46px 0px $gray-shadov, -8px 6px 46px 0px $gray-shadov;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 174px;
+            background: url(assets/img/dot-bg.svg);
+            bottom: -53px;
+            right: -291px;
+            z-index: -1;
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $gray-color;
+            margin-bottom: 22px;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            counter-reset: list;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 16px;
+            position: relative;
+
+            &::before {
+                content: counter(list) "";
+                counter-increment: list;
+                position: absolute;
+                width: 21px;
+                height: 21px;
+                background-color: $brand-black-color;
+                color: $brand-white-color;
+                font-weight: 700;
+                font-size: 11px;
+                border-radius: 50%;
+                top: 0;
+                left: 34px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &-avatar {
+            width: 54px;
+            height: 54px;
+        }
+
+        &-name {
+            font-size: 12px;
+            color: $gray-color;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+
+        &-nickname {
+            font-size: 10px;
+            color: $gray-svg;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-top: 30px;
+            margin-left: -48px;
+        }
+
+        button {
+            padding: 6px 14px;
+            font-size: 12px;
+            border-color: $gray-accent;
+            text-transform: capitalize;
+            max-height: 28px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-top: 14px;
+        }
+
+        .btn-unfollow {
+            background-color: $gray-accent;
+        }
+    }
+    
+    &__widget-new-bit {
+        background-color: $brand-white-color;
+        max-width: 326px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 14px -10px 46px 0px $gray-shadov, -8px 6px 46px 0px $gray-shadov;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        max-height: 84px;
+        margin-top: -36px;
+        margin-left: -140px;
+        position: relative;
+
+        &-item {
+            width: 302px;
+            display: flex;
+            padding-left: 20px;
+            position: relative;
+            justify-content: space-between;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 8px;
+                width: 8px;
+                background-color: $brand-black-color;
+                border-radius: 50%;
+                top: 18px;
+                left: 0px;
+            }
+        }
+
+        img.just-unleash__widget-widget-new-bit-avatar{
+            width: 44px;
+            height: 44px;
+        }
+
+        img.just-unleash__widget-widget-new-bit-img {
+            width: 60px;
+            height: 60px;
+            margin-left: auto;
+        }
+
+        .just-unleash__widget-widget-new-bit-column {
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            max-width: 150px;
+            width: 100%;
+
+            .rotation {
+                font-size: 14px;
+                color: $gray-color;
+                line-height: 1.7;
+                font-weight: 500;
+    
+                span {
+                    color: $gray-svg;
+                }
+            }
+
+            .price {
+                font-size: 12px;
+                color: $gray-color;
+                line-height: 1.5;
+            }
+
+            .data {
+                font-size: 12px;
+                line-height: 1.5;
+                color: $gray-svg;
+            }
+            
+        }
+    }
+}

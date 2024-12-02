@@ -3,4 +3,65 @@
         gap: 30px;
         padding: 0 24px;
     }
+
+    .leaderboard-container {
+        &__head {
+            &-item {
+                max-width: 160px;
+                font-size: 20px;
+                gap: 2px;
+
+                &:first-child {
+                    max-width: 480px;
+                }
+
+                &:last-child {
+                    max-width: 64px;
+                }
+            }
+            
+        }
+
+        &__section {
+            &-user,
+            &-volume,
+            &-time,
+            &-floor-price,
+            &-owner,
+            &-items {
+                max-width: 160px;
+                font-size: 20px;
+                gap: 2px;
+            }
+
+            &-user {
+                max-width: 480px;
+            }
+
+            &-name {
+                font-size: 24px;
+            }
+
+            &-items{
+                max-width: 64px;
+            }
+        }
+    }
+
+    .just-unleash {
+
+        .container {
+            flex-direction: column;
+        }
+
+        &__list {
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        &__wigets {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+    }
 }

@@ -1,0 +1,53 @@
+.nft-galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+
+    .product {
+        margin-bottom: 18px;
+        max-width: 281px;
+        min-width: 281px;
+        box-shadow: 30px 1px 78px 0px $gray-shadov;
+    }
+}
+
+.discover-nft {
+
+    &__title.section-title{
+        margin-top: 110px;
+        margin-bottom: 44px;
+    }
+}
+
+.explore-marketplace {
+    margin-bottom: 116px;
+    
+    .container {
+        border-bottom: 1px solid $gray-svg;
+        padding-bottom: 102px;
+    }
+
+    &__title.section-title {
+        margin-bottom: 64px;
+    }
+
+    .content-buttons {
+        button {
+            &:first-child {
+                max-width: 72px;
+            }
+        }
+    }
+
+    .nft-galery {
+        gap: 32px;
+        height: 957px;
+        overflow: auto;
+        padding: 70px 10px;
+
+        .product {
+            margin-bottom: 32px;
+        }
+    }
+}

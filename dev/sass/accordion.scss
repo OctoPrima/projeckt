@@ -1,0 +1,88 @@
+.asked{
+    margin-bottom: 214px;
+     
+    &-title  {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        gap: 10px;
+        margin-bottom: 78px;
+        
+        span {
+            color: $gray-accent;
+        }
+    }
+
+    .accordion-item {
+        width: 100%;
+        padding: 0 84px;
+
+        &__button {
+            border: none;
+            background-color: transparent;
+            color: $gray-color;
+            font-weight: 600;
+            font-size: 26px;
+            display: flex;
+            width: 100%;
+            height: 114px;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 14px 0 14px;
+            border-bottom: 1px solid $gray-svg;
+            position: relative;
+            box-sizing: border-box;
+            text-align: left;
+
+            &::after {
+                content: "+";
+                color: $brand-white-color;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                background-color: $gray-color;
+                border-radius: 50%;
+                font-weight: 400;
+                margin-left: auto;
+                text-align: center;
+            }
+        }
+
+        &__content {
+            font-size: 18px;
+            font-weight: 400;
+            padding: 14px 0 10px 0;
+            text-align: justify;
+            color: $gray-svg;
+            display: none;
+
+            ul {
+                padding-left: 50px;
+                padding-top: 6px;
+
+                li {
+                    padding: 4px 0;
+                }
+            }
+        }
+    }
+
+    .active {
+        .accordion-item {
+
+            &__content {
+                display: block;
+            }
+        
+            &__button {
+                &::after {
+                    content: "−";
+                }
+            }
+        }
+
+    }
+
+}
+

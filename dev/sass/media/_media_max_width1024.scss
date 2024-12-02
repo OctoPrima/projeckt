@@ -258,7 +258,10 @@
         }
     }
 
+
+
     .weekly {
+        margin-bottom: 78px;
     
         .container {
     
@@ -276,55 +279,47 @@
             min-width: 198px;
             max-width: 198px;
         }
+
+        .product {
+            @include product-small;
+        }
     }
 
 
-    .product {
-        padding: 10px 10px 14px;
-        border-radius: 16px;
-    
-        &-img {
-    
-            img:nth-child(1) {
-                width: 178px;
-                height: 178px;
-                border-radius: 16px;
-            }
-        }
-    
-        &-title {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-    
-        &-bid-title {
-            font-size: 10px;
-            margin-bottom: 4px;
-        }
-    
-        &-bid {
-            font-size: 12px;
 
-            .d-desktop {
-                display: none;
-            }
+    div.content-buttons {
+        gap: 14px;
+        margin-bottom: 76px;
 
-            .d-mobile {
-                display: flex;
-            }
-        }
-    
-        & .btn-small {
-            max-width: 86px;
-            margin-top: -38px;
-            font-size: 10px;
-            padding: 10px 17px;
+        button {
+            max-width: 88px;
+            border: 2px solid;
             border-radius: 8px;
+            padding: 10px 0;
+            font-size: 10px;
+            gap: 6px;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
     .widget {
         display: none;
+    }
+
+    a.button-explore {
+        margin: 40px auto 0 auto;
+        font-size: 12px;
+        height: 62px;
+        max-width: 86px;
+
+        svg  {
+            width: 12px;
+            height: 12px;
+        }
     }
 
     section.account {
@@ -590,6 +585,602 @@
             }
         }
     }
+
+    section.asked {
+        margin-bottom: 112px;
+
+        .asked-title {
+            font-size: 24px;
+            margin-bottom: 66px;
+        }
+
+        .accordion-item {
+            padding: 0 18px;
+
+            &__button {
+                font-size: 12px;
+                height: 50px;
+                padding: 16px 10px 0 10px;
+
+                &::after {
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+
+            &__content {
+                font-size: 10px;
+                padding: 10px 0 6px 0;
+    
+                ul {
+                    padding-left: 20px;
+                    padding-top: 2px;
+    
+                    li {
+                        padding: 2px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .leaderboard-container {
+        max-width: 1200px;
+        padding: 0 18px;
+        width: 668px;
+        margin: 0 auto;
+        max-width: 100vw;
+        overflow-y: scroll;
+        
+        &__head {
+            display: flex;
+            margin-bottom: 34px;
+            width: 668px;
+    
+            &-item {
+                font-size: 14px;
+                height: 18px;
+                max-width: 100px;
+                justify-content: center;
+
+                &:first-child {
+                    max-width: 168px;
+                    justify-content: start;
+                }
+
+                &:last-child {
+                    max-width: 100px;
+                }
+
+
+                button {
+                    display: none;
+                }
+            }
+        }        
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 668px;
+
+            .leaderboard-container__section {
+                height: 80px;
+                margin-bottom: 0px;
+                padding-bottom: 8px;
+        
+                &-volume,
+                &-time,
+                &-floor-price,
+                &-owner,
+                &-items {
+                    font-size: 16px;
+                    max-width: 100px;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+                &-user {
+                    font-size: 16px;
+                    padding-top: 10px;
+                    max-width: 200px;
+        
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+    
+                &-name {
+                    margin-top: -50px;
+                    font-size: 16px;
+                    margin-left: 60px;
+                    margin-bottom: 12px;
+                }
+        
+                &-created {
+                    font-size: 12px;
+                    margin-left: 60px;
+                }
+    
+                &-floor-price,
+                &-volume {
+
+                    .mobil-none {
+                        display: none;
+                    }
+    
+                    .destop-none {
+                        display: flex;
+                    }
+                }
+        
+                &-time{
+                    font-size: 12px;
+                    margin: 0;
+                }
+        
+                &-floor-price,
+                &-owner,
+                &-items {
+                    font-size: 12px;
+                }
+            }
+        }
+    
+    }
+
+    .top-collection {
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 42px;
+        }
+    
+        .leaderboard-container {
+            padding-right: 12px;
+            height: 360px;
+
+            &__head-item:nth-child(3)::after {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    section .leaderboard {
+    
+        &-title {
+            padding-top: 44px;
+            margin-bottom: 30px;
+            font-size: 30px;
+            max-width: 204px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }  
+    }
+
+    .nft-galery.list-products {
+        gap: 12px;
+    }
+
+    .discover-nft {
+
+        &__title.section-title{
+            margin-top: 44px;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+    }
+
+    .explore-marketplace {
+        margin-bottom: 164px;
+        
+        .container {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    
+        &__title.section-title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .content-buttons {
+            margin-bottom: 0;
+            button {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    
+        .nft-galery {
+            gap: 32px;
+            height: 1762px;
+            overflow: hidden;
+            padding: 70px 10px;
+    
+            .product {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    section.join-the-community {
+        margin-top: -100px;
+        margin-bottom: 110px;
+    
+        .join-the-community__title.section-title {
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+    
+        .join-the-community__info {
+            max-width: 226px;
+            font-size: 8px;
+            margin-bottom: 24px;
+        }
+    
+        a {
+            max-width: 100px;
+            font-size: 8px;
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .join-the-community__animation {
+            max-width: 1024px;
+            margin: 0 auto;
+            
+            .m-sm-none {
+                display: none;
+            }
+
+            .m-sm-block {
+                display: block;
+            }
+        } 
+    
+    }
+
+    .just-unleash {
+        margin-bottom: 246px;
+        
+    
+        &__list {
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+    
+        &__title.section-title {
+            font-size: 30px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+    
+        &__chek-list {
+            display: none;
+        }
+    
+        a.btn{
+            margin: 0 auto;
+            max-width: 124px;
+            height: 44px;
+            gap: 8px;
+            padding: 0 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+    
+            svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    
+        &__wigets {
+            max-width: 306px;
+            margin: 0 auto;
+        }
+    
+        .widget {
+            display: block;
+            margin-top: 160px;
+            margin-right: -80px;
+            z-index: 10;
+            max-width: 158px;
+            border-radius: 8px;
+            padding: 10px;
+            position: relative;
+
+            .layout-menu {
+                top: 16px;
+                right: 14px;
+        
+                &.show {
+                    
+                    .layout-case {
+                        gap: 4px;
+                        height: 16px;
+                        width: 30px;
+                        border-radius: 2px;
+                        margin-top: -8px;
+                    }
+                }
+                
+                & button {
+                    height: 10px;
+                    width: 16px;
+                    position: absolute;
+                    top: -6px;
+                    right: 0px;
+                }
+            }
+            
+        
+            &__title {
+                margin-bottom: 12px;
+                
+                h4 {
+                    font-size: 8px;
+                }
+            }
+        
+            .widget-users-list {
+                max-height: 90px;
+                padding-right: 2px;
+                
+                &__item {
+                    margin-bottom: 8px;
+        
+                    &::before {
+                        width: 8px;
+                        height: 8px;
+                        font-size: 4px;
+                        top: 14px;
+                        left: 12px;
+                    }
+                }
+        
+                .widget-user {
+        
+                    &__avatar img {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;
+                    }
+        
+                    &__data {
+                        gap: 4px;
+                    }
+        
+                    &__name {
+                        font-size: 6px;
+                    }
+        
+                    &__nick-name {
+                        font-size: 5px;
+                    }
+        
+                    &__volume {
+                        gap: 4px;
+                    }
+        
+                    &__price {
+                        font-size: 6px;
+
+                        i {
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                    
+                    &__percent  {
+                        font-size: 5px;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        
+            &.grid {
+                
+                .widget-users-list {
+                    gap: 6px;
+                    
+                    .widget-user {
+
+                        &__data {
+                            gap: 0;
+                        }
+
+                        &__volume {
+                            gap: 0;
+                            margin-left: -5px;
+                        }
+            
+                        &__avatar img {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .widget-users-list__item {
+            
+                        &::before {
+                            left: 24px;
+                        }
+                    }
+            
+                }
+            }
+        }
+    
+        &__widget-follow {
+            max-width: 158px;
+            max-height: 244px;
+            border-radius: 6px;
+            padding: 12px 10px;
+
+            &::after {
+                width: 194px;
+                height: 82px;
+                bottom: -20px;
+                right: -160px;
+            }
+    
+            &-title {
+                font-size: 8px;
+                margin-bottom: 12px;
+            }
+    
+            &-item {
+                margin-bottom: 8px;
+    
+                &::before {
+                    width: 10px;
+                    height: 10px;
+                    font-size: 6px;
+                    top: 0;
+                    left: 16px;
+                }
+            }
+    
+            &-avatar {
+                width: 26px;
+                height: 26px;
+            }
+    
+            &-name {
+                font-size: 6px;
+                margin-top: 4px;
+                margin-left: 6px;
+            }
+    
+            &-nickname {
+                font-size: 4px;
+                margin-top: 14px;
+                margin-left: -24px;
+            }
+    
+            button {
+                padding: 3px 6px;
+                font-size: 6px;
+                max-height: 18px;
+                border-radius: 3px;
+                margin-top: 7px;
+            }
+        }
+        
+        &__widget-new-bit {
+            max-width: 158px;
+            border-radius: 6px;
+            padding: 6px;
+            max-height: 42px;
+            margin-top: -16px;
+            margin-left: -60px;
+    
+            &-item {
+                width: 144px;
+                padding-left: 12px;
+    
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 4px;
+                    width: 4px;
+                    top: 8px;
+                }
+            }
+    
+            img.just-unleash__widget-widget-new-bit-avatar{
+                width: 20px;
+                height: 20px;
+            }
+    
+            img.just-unleash__widget-widget-new-bit-img {
+                width: 30px;
+                height: 30px;
+            }
+    
+            .just-unleash__widget-widget-new-bit-column {
+                padding-left: 5px;
+                max-width: 60px;
+    
+                .rotation {
+                    font-size: 6px;
+                }
+    
+                .price {
+                    font-size: 6px;
+                }
+    
+                .data {
+                    font-size: 5px;
+                }
+                
+            }
+        }
+    }
+
+    .links {
+        margin-bottom: 160px;
+    
+        >.container {
+            background-color: $brand-black-color;
+            border-radius: 16px;
+            max-width: 600px;
+            padding: 22px 40px; 
+            max-height: 212px;
+        }
+    
+        h2.links__title {
+           font-size: 22px;
+           text-align: center;
+           padding: 0;
+           margin-bottom: 6px;
+        }
+    
+        h5.links__subtitle{
+            font-size: 10px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    
+        &__buttons {
+            max-width: 196px;
+            margin: 0 auto;
+            margin-bottom: 46px;
+    
+            button {
+                border: 2px solid $brand-white-color;
+                font-size: 10px;
+                padding: 10px 12px;
+                border-radius: 6px;
+            }
+        }
+    
+        .img-sourse {
+            margin: 0 auto;
+            max-width: 280px;
+    
+            img {
+    
+                &:last-child {
+                    margin-top: calc(-100% + 40px);
+                    margin-left: 0px;
+                    width: 252px;
+                }
+    
+                &:first-child {
+                    filter: blur(30px);
+                    width: 272px;
+                    margin-left: -10px;
+                }
+            }
+        }
+    }
 }
-
-

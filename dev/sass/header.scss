@@ -23,7 +23,8 @@ header {
                         line-height: 1.44;
                         font-size: 18px;
 
-                        &:hover {
+                        &:hover,
+                        .pointer {
                             color: $brand-black-color;
                             text-shadow: 1px 1px 1px $brand-black-color;
                         }

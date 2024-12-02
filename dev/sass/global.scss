@@ -6,6 +6,7 @@
 
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
     background-color: $bg-body;
     border-radius: 6px;
 }
@@ -115,6 +116,76 @@ a {
         padding: 13px 23px;
     }
 
+}
+
+.content-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 0 auto 98px;
+
+    button {
+        max-width: 154px;
+        width: 100%;
+        text-transform: capitalize;
+        border: 3px solid;
+        border-radius: 14px;
+        padding: 18px 0;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+            width: 28px;
+            height: 28px;
+            color: $brand-black-color;
+        }
+
+        &:hover {
+            border-color: $brand-black-color;
+
+            svg {
+                color: $brand-white-color;
+            }
+        }
+    }
+}
+
+.button-explore {
+    margin-top: 84px;
+    color: $gray-svg;
+    height: 40px;
+    position: relative;
+    text-transform: capitalize;
+    line-height: 1.2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+    width: 100%;
+    margin-left: auto;
+    gap: 12px;
+    font-weight: 500;
+
+    &:hover {
+        color: $brand-black-color;
+        text-shadow: 1px 1px 4px $gray-svg;
+
+        svg {
+            stroke: $brand-black-color;
+        }
+    }
+
+    svg {
+        stroke: $gray-svg;
+        width: 18px;
+        height: 18px;
+    }
 }
 
 svg {

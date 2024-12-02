@@ -1,0 +1,34 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+<section class="leaderboard">
+    <div class="container">
+        <h2 class="leaderboard-title section-title">Leaderboard NFTs</h2>
+
+
+        <div class="content-buttons">
+            <button class="btn btn-secondary buttons__item">
+                <svg class="icon-svg">
+                    <use xlink:href="#btn-icon-category"></use>
+                </svg>
+                Category</button>
+            <button class="btn btn-secondary buttons__item">
+                <svg class="icon-svg">
+                    <use xlink:href="#btn-icon-collection"></use>
+                </svg>
+                Collection</button>
+            <button class="btn btn-secondary buttons__item">
+                <svg class="icon-svg">
+                    <use xlink:href="#btn-icon-price"></use>
+                </svg>
+                Price</button>
+        </div>
+
+        @@include('templates/top-table.html') 
+
+        <div class="account__load"></div>
+    </div>
+</section>
+
+
+@@include('templates/footer.html') 

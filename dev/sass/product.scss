@@ -1,4 +1,4 @@
-.product {
+@mixin product {
     display: flex;
     flex-direction: column;
     background-color: $brand-white-color;
@@ -49,5 +49,53 @@
         max-width: 122px;
         margin-top: -52px;
         @include flex-centered;
+    }
+}
+
+.product {
+    @include product;
+}
+
+@mixin product-small {
+    padding: 10px 10px 14px;
+    border-radius: 16px;
+
+    &-img {
+
+        img:nth-child(1) {
+            width: 178px;
+            height: 178px;
+            border-radius: 16px;
+        }
+    }
+
+    &-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    &-bid-title {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    &-bid {
+        font-size: 12px;
+
+        .d-desktop {
+            display: none;
+        }
+
+        .d-mobile {
+            display: flex;
+        }
+    }
+
+    & .btn-small {
+        max-width: 86px;
+        margin-top: -38px;
+        font-size: 10px;
+        padding: 10px 17px;
+        border-radius: 8px;
     }
 }
