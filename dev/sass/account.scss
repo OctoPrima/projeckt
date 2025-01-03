@@ -226,6 +226,16 @@
                 min-width: 204px;
                 padding: 10px 10px 14px;
                 box-shadow: 9px 1px 30px -11px $gray-shadov, 6px 1px 71px -18px $gray-shadov;
+                position: relative;
+                border-radius: 18px;
+
+                &-data {
+                    top: 20px;
+                    right: 18px;
+                    font-size: 10px;
+                    padding: 6px 10px;
+                    border-radius: 6px;
+                }
 
                 .product-title {
                     font-size: 16px;
@@ -239,12 +249,14 @@
                 img {
                     width: 182px;
                     height: 182px;
+                    border-radius: 12px;
                 }
 
                 .btn {
                     padding: 12px 18px;
                     font-size: 10px;
                     margin-top: -32px;
+                    border-radius: 8px;
                 }
 
                 .product-bid {

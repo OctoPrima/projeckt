@@ -1,0 +1,344 @@
+.sell {
+    margin-bottom: 210px;
+
+    .nice-select {
+        width: 146px;
+        height: 64px;
+        border: 1px solid  $gray-bg;
+        background-color:  $gray-bg;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        padding-left: 26px;
+        border-radius: 12px;
+
+        &:hover {
+            border-color: $brand-black-color;
+        }
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 6px;
+            background: url(assets/img/nice-select-arrey.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 28px;
+            top: 51%;
+            transform: translateY(-50%);
+            filter: invert(33%) sepia(47%) saturate(9%) hue-rotate(357deg) brightness(96%) contrast(81%);
+            transition: .3s;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .list {
+            width: 100%;
+            background-color:  $gray-bg;
+        }
+
+        .option:hover,
+        .option.focus, 
+        .option.selected.focus {
+            background-color:  inherit;
+        }
+
+        &.open {
+
+            &::before {
+                transform: rotate(-180deg);
+                top: 48%;
+                transition: .3s;
+            }
+        }
+    }
+
+    &-title {
+        margin-top: 115px;
+        margin-bottom: 153px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: row;
+        gap: 68px;
+        width: 100%;
+
+        &__info {
+            max-width: 702px;
+            width: 100%;
+            
+            &--name,
+            &--texarea,
+            &--tags {
+               background: url(assets/img/write-pen-input.svg) no-repeat $gray-bg;
+               background-position-y: 20px;
+               background-position-x: 94%;
+            }
+
+            label h5{
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            fieldset {
+                margin-bottom: 36px;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                height: 62px;
+                padding-left: 26px;
+                background-color: $gray-bg;
+                border-radius: 12px;
+                border: 1px solid $gray-bg;
+                font-size: 14px;
+                font-weight: 400;
+
+                &:hover {
+                    border-color: $brand-black-color;
+                }
+            }
+
+            &--texarea {
+                min-height: 166px;
+                max-height: 200px;
+                padding-top: 20px;
+            }
+
+            &--royalty-size {
+                display: flex;
+            }
+
+            &--royalty,
+            &-bit-stock {
+                
+                &:not(.sell-form__info-bit-stock) {
+                    margin-right: 36px;
+                }
+            }
+
+            &--size {
+
+                input {
+                    width: 144px;
+                    padding-right: 26px;
+                }
+            }
+
+            &-bit {
+                display: flex;
+                margin-bottom: 36px;
+    
+                &-select {
+                    width: 492px;
+                    height: 62px;
+                    background-color: $gray-bg;
+                    display: flex;
+                    margin-right: 40px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid $gray-bg;
+    
+                    &:hover {
+                        border: 1px solid $brand-black-color;
+                    }
+
+                    &--number.input-namber {
+                        background-color: transparent;
+                        border-radius: 0;
+                        height: 58px;
+                        margin: 0 2px;
+                        border: none;
+    
+                        &:hover {
+                            border: none;
+                        }
+                    }
+
+                    .nice-select {
+                        background-color: transparent;
+                        height: 40px;
+                        border-radius: 0;
+                        border: none;
+                        height: 40px;
+                        border-right: 1px solid $gray-accent;
+                        min-width: 96px;
+
+                        &:hover {
+                            border-right: 1px solid $gray-accent;
+                        }
+                    }
+                }
+
+                &-stock {
+
+                    .nice-select {
+                        width: 172px;
+                    }
+                }
+            }
+
+            &--checbox {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 174px;
+
+                input {
+                    display: none;
+                }
+
+                .toggle-checbox {
+                    & [type="checkbox"] {
+                        & + label {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 54px;
+                            margin-bottom: 40px;
+                            width: 100%;
+                            position: relative;
+                            cursor: pointer;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            span {
+                                font-size: 20px;
+                                font-weight: 500;
+                                color: $brand-black-color;
+                                text-transform: capitalize;
+
+                                &:nth-child(2n) {
+                                    font-size: 14px;
+                                    color: $gray-accent;
+                                    font-weight: 400;
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 56px;
+                                height: 30px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 0;
+                                background: $gray-bg;
+                                border-radius: 20px;
+                                transition: .3s;
+                            }
+                            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 30px;
+                                background: $brand-black-color;
+                                border-radius: 50%;
+                                transition: .3s;
+                            }
+                        }
+
+                        &:checked + label::before {
+                            background-color: $brand-black-color;
+                            transition: .3s;
+                        }
+
+                        &:checked + label::after {
+                            background-color: $gray-bg;
+                            right: 5px;
+                            transition: .3s;
+                        }
+                    }
+                }
+
+            }
+
+            .btn-create {
+                width: 100%;
+                height: 66px;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 12px;
+                text-transform: capitalize;
+            }
+
+        }
+
+        &__drope-zone {
+            max-width: 468px;
+            width: 100%;
+            margin-top: 46px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .control-input {
+                max-width: 468px;
+                width: 100%;
+                height: 414px;
+                background-color: $brand-white-color;
+                border-radius: 30px;
+                box-shadow: 14px -10px 46px 0px $gray-shadov, -8px 6px 46px 0px $gray-shadov;
+                margin-bottom: 58px;
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    width: 178px;
+                    text-align: center;
+                }
+
+                .img-drope-zone {
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 12px;
+                    height: 50px;
+                    width: 50px;
+                    background: url(assets/img/Line.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+
+            .btn-upload {
+                height: 64px;
+                max-width: 328px;
+                width: 100%;
+                border-radius: 16px;
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

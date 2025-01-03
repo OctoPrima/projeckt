@@ -1,0 +1,189 @@
+.custom-modal {
+    display: none;
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+
+    &__body {
+        width: 438px;
+        height: 732px;
+        border-radius: 20px;
+        border: 2px solid $brand-black-color;
+        background-color: $brand-white-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 44px 18px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $brand-black-color;
+        margin-bottom: 2px;
+        line-height: 1.5;
+    }
+
+    &__data {
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray-svg;
+        margin-bottom: 18px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 46px;
+    }
+
+    &__item {
+        display: flex;
+        background-color: $brand-white-color;
+        height: 100px;
+        width: 100%;
+        box-shadow: 5px 7px 13px 2px #c8c7c7, -3px -3px 10px 3px #c8c7c7;
+        border-radius: 12px;
+        align-items: center;
+        position: relative;
+        padding: 18px 50px 18px 18px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background: url(assets/img/account-chek.svg) $brand-white-color;
+            top: 21px;
+            left: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 50%;
+            border: 2px solid $brand-white-color;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    &__creator {
+        font-size: 16px;
+        font-weight: 500;
+        color: $brand-black-color;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        margin-left: 14px;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            color: $gray-svg;
+        }
+    }
+    
+    &__etherium {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: $brand-black-color;
+        margin-left: auto;
+    }
+
+    &__bit {
+        margin-top: auto;
+
+        &-title {
+            font-weight: 600;
+            color: $brand-black-color;
+            margin-bottom: 12px;
+            text-transform: capitalize;
+        }
+
+        &-select {
+            width: 100%;
+            border: 1px solid $brand-black-color;
+            border-radius: 24px;
+            margin-bottom: 12px;
+
+            &:hover {
+                background-color: $gray-bg;
+            }
+
+            &--namber {
+                background-color: transparent;
+                border: none;
+                height: 70px;
+                padding-left: 12px;
+            }
+
+            .nice-select {
+               background-color: $brand-black-color;
+               color: $brand-white-color;
+               border: none;
+               height: 70px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 20px;
+               font-weight: 500;
+               border-radius: 24px 0 0 24px;
+               width: 156px;
+
+               &::after {
+                border: none;
+                background: url(assets/img/nice-select-arrey.svg);
+                transform: rotate(0);
+                width: 18px;
+                height: 8px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+                right: 42px;
+               }
+
+               &.open::after {
+                transform: rotate(-180deg);
+               }
+
+               .option {
+                background-color: $brand-black-color;
+               }
+
+               .list {
+                width: 100%;
+                border-radius: 24px;
+               }
+                
+            }
+
+            .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+                background-color: $brand-black-color;
+            }
+        }
+
+        &-button {
+            width: 100%;
+            margin-top: auto;
+            text-transform: capitalize;
+            font-size: 16px;
+            padding: 22px;
+        }
+    }
+
+
+    &.show {
+        display: block;
+    }
+}
+

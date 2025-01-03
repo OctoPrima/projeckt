@@ -61,7 +61,24 @@
 
         &__wigets {
             margin: 0 auto;
-            max-width: 600px;
+            width: 100%;
+        }
+    }
+
+    .product-detail {
+    
+        &-project {
+            flex-direction: column;
+    
+            &__img {
+                margin: 0 auto;
+                margin-bottom: 60px;
+            }
+    
+            &__info {
+                margin: 0 auto;
+                height: 564px;
+            }
         }
     }
 }

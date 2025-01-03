@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 40px;
+    gap: 68px 40px;
 
     .product {
-        margin-bottom: 18px;
         max-width: 281px;
         min-width: 281px;
         box-shadow: 30px 1px 78px 0px $gray-shadov;
+        position: relative;
     }
 }
 
@@ -41,13 +41,14 @@
     }
 
     .nft-galery {
-        gap: 32px;
-        height: 957px;
+        gap: 58px 32px;
+        height: 848px;
         overflow: auto;
-        padding: 70px 10px;
+        box-shadow: 0px 13px 46px -20px #c8c7c7, 16px -17px 39px -25px #c8c7c7;
+        border-radius: 38px;
 
-        .product {
-            margin-bottom: 32px;
+        &::-webkit-scrollbar {
+            background: linear-gradient(180deg, #eeeeee 0%, #c8c7c7 52%, #eeeeee 100%);
         }
     }
 }

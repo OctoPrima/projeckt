@@ -29,6 +29,11 @@ header {
                             text-shadow: 1px 1px 1px $brand-black-color;
                         }
                     }
+
+                    a.active {
+                        color: $brand-black-color;
+                        text-shadow: 1px 1px 1px $brand-black-color;
+                    }
                 }
 
                 & form.header-search{

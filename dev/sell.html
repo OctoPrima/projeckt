@@ -1,0 +1,94 @@
+@@include('templates/head.html')
+@@include('templates/header.html')
+
+<section class="sell">
+    <div class="container">
+        <h2 class="section-title sell-title">Create Your NFT</h2>
+
+        <form class="sell-form">
+        <div class="sell-form__info">
+            <fieldset>
+                <label for="name"><h5>Name</h5></label>
+                <input type="text" name="name-nft" placeholder="ArtWork Name" class="sell-form__info--name">
+            </fieldset>
+
+            <fieldset>
+                <label for="letter"><h5>Description</h5></label>
+                <textarea id="description" name="description" placeholder="Enter Your Description" class="sell-form__info--texarea"></textarea>
+            </fieldset>
+
+            <div class="sell-form__info--royalty-size">
+                <fieldset class="sell-form__info--royalty">
+                    <label for="royalty"><h5>Royalty</h5></label>
+                    <select name="royalty" id="royalty">
+                        <option value="royalty">Royalty</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </fieldset>
+                <fieldset class="sell-form__info--size">
+                    <label for="size"><h5>Size</h5></label>
+                    <input type="text" placeholder="Ex - 100 x 100">
+                </fieldset>
+            </div>
+            
+            <fieldset>
+                <label for="tags"><h5>Tags</h5></label>
+                <input type="text" placeholder="Beautiful Castle, Monkeys ETC" class="sell-form__info--tags">
+            </fieldset>
+
+            <div class="sell-form__info-bit">
+                <fieldset>
+                    <label for="price"><h5>Price</h5></label>
+                    <div class="sell-form__info-bit-select">
+                        <select class="sell-form__info-bit-select--options" id="bit" name="bit">
+                            <option value="eth">ETH</option>
+                            <option value="btc">BTC</option>
+                            <option value="usdt">USDT</option>
+                            <option value="sol">SOL</option>
+                        </select>
+                        <input class="sell-form__info-bit-select--number input-namber" type="number">
+                    </div>
+                </fieldset>
+
+                <fieldset class="sell-form__info-bit-stock">
+                    <label for="in-stock"><h5>In Stock</h5></label>
+                    <select name="in-stock" id="in-stock" >
+                        <option value="001">001</option>
+                        <option value="002">002</option>
+                        <option value="003">003</option>
+                        <option value="004">004</option>
+                        <option value="none">none</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="sell-form__info--checbox">
+                <div class="radio-box toggle-checbox">
+
+                     <input type="checkbox" id="sale" name="sale">
+                     <label for="sale" class="sale-chek">
+                         <span>Put On Sale</span>
+                         <span>People Will Bids On Your NFT Project</span>
+                     </label>
+
+                     <input type="checkbox" id="direct-sale" name="direct-sale">
+                     <label for="direct-sale" class="direct-sale-chek">
+                         <span>Direct Sale</span>
+                         <span>No Bids - Only Direct Salling</span>
+                     </label>
+
+                 </div>
+            </div>
+
+             <button type="submit" class="btn btn-primary btn-create">Create</button>
+        </div>
+        <div class="sell-form__drope-zone">
+            @@include('templates/drope-zone.html') 
+            <button class="btn btn-primary btn-upload">Upload</button>
+        </div>
+        </form>
+    </div>
+</section>
+
+@@include('templates/footer.html') 
